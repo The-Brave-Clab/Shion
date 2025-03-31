@@ -24,7 +24,7 @@ provide(SET_FULLSCREEN_KEY, (items: string[], index = 0) => {
         class="bg-primary text-primary-foreground text-sm px-2 py-1 shadow rounded flex flex-wrap gap-x-2 z-10 sticky top-2 sm:top-4"
       >
         <NuxtLink to="/" class="font-bold"
-          >ゆゆゆ勇者部アーカイブビューアー</NuxtLink
+          >ゆゆゆ勇者部ビューアー</NuxtLink
         >
 
         <ul class="flex gap-2">
