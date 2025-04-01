@@ -15,9 +15,22 @@ const imageViewer = ref<InstanceType<typeof FullscreenImageViewer> | null>(
 provide(SET_FULLSCREEN_KEY, (items: string[], index = 0) => {
   imageViewer.value?.setFullscreen(items, index);
 });
+
+const url = useRequestURL();
+const baseUrl = url.origin;
+
+useSeoMeta({
+  title: "Shion",
+  description: "ゆゆゆ勇者部アーカイブビューアー",
+  ogImage: {
+    url: `${baseUrl}/logo_orig.webp`,
+  },
+});
 </script>
 
 <template>
+  <Link rel="icon" href="/favicon.ico" />
+
   <div class="flex flex-col items-center p-2 sm:p-4">
     <div class="max-w-3xl w-full space-y-2 sm:space-y-4">
       <nav

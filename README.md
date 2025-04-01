@@ -1,8 +1,31 @@
-# Nuxt Minimal Starter
+# Shion
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**Shion** is an archive viewer for the mobile application [ゆゆゆ勇者部](https://c-rayon.com/result/yuyuyu/) which has been discontinued on March 31, 2025.
+
+> 結城友奈は勇者であるオフィシャルアプリ「ゆゆゆ勇者部」は 2025/3/31 をもってサービスを終了させていただくこととなりました。
+>
+> 短い期間ではございましたが、ご愛顧いただき誠にありがとうございました。
+>
+> ...
 
 ## Setup
+
+Place the files you downloaded using [yyyysb-python](https://github.com/The-Brave-Clab/yyyysb-python) into the `public/data` directory as follow:
+```
+Shion/public
+└──data
+   ├──article
+   ├──choice
+   ├──information
+   ├──informationCategory
+   ├──photo
+   ├──poll
+   ├──thumbnail
+   ├──tlPost
+   ├──user
+   ├──video
+   └──vimeo
+```
 
 Make sure to install dependencies:
 
@@ -73,3 +96,11 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Todo
+
+- Pages to be implemented
+  - [x] Timeline
+  - [ ] Article
+  - [ ] information
+  - [ ] Video
