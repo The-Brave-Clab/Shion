@@ -4,7 +4,7 @@ import { existsSync } from "fs";
 import type { ArchiveItem, RelationshipData } from "~/types";
 
 const categories = ["tlPost", "article", "video", "information"];
-const dataPath = resolve(process.cwd(), "public", "data");
+export const dataPath = resolve(process.cwd(), "public", "data");
 const archiveDataCache = new Map<string, ArchiveItem>();
 
 function isValidType(type: string): boolean {

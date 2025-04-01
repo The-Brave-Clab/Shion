@@ -65,6 +65,6 @@
 
   body {
     @apply bg-[#fef2f2] text-foreground;
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP Variable", sans-serif;
   }
 }

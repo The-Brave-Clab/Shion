@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, onMounted, ref, toRefs } from "vue";
+import { computed, ref, toRefs } from "vue";
 
 import Avatar from "./ui/avatar/Avatar.vue";
 import AvatarImage from "./ui/avatar/AvatarImage.vue";
@@ -43,19 +43,19 @@ const mostVoted = computed(
     )[0]
 );
 
-onMounted(() => {
-  fetch(withBaseUrl(`/data/tlPost/${item.value.id}/text.txt`))
-    .then((res) => res.text())
-    .then((text) => {
-      postText.value = text;
-    })
-    .catch((err) => {
-      console.error(err);
-    })
-    .finally(() => {
-      postTextLoading.value = false;
-    });
-});
+await fetchText();
+
+async function fetchText() {
+  const { data, error } = await useFetch("/api/getTlPostText", {
+    query: {
+      id: item.value.id,
+    },
+  });
+
+  if (!error.value) postText.value = data.value ?? undefined;
+
+  postTextLoading.value = false;
+}
 </script>
 
 <template>

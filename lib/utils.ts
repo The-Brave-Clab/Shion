@@ -19,7 +19,10 @@ export function valueUpdater<T extends Updater<any>>(
 }
 
 export function withBaseUrl(url: string) {
-  const baseUrl = import.meta.env.VITE_BASE_URL || "";
+  const runtimeConfig = useRuntimeConfig();
+
+  const baseUrl = runtimeConfig.public.baseUrl;
+
   return baseUrl + url;
 }
 

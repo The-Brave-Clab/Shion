@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import "@fontsource-variable/noto-sans-jp";
+import "@fontsource-variable/noto-sans-jp";
 
 import FullscreenImageViewer from "./components/FullscreenImageViewer.vue";
 import { SET_FULLSCREEN_KEY } from "./components/keys";
@@ -23,9 +23,9 @@ provide(SET_FULLSCREEN_KEY, (items: string[], index = 0) => {
       <nav
         class="bg-primary text-primary-foreground text-sm px-2 py-1 shadow rounded flex flex-wrap gap-x-2 z-10 sticky top-2 sm:top-4"
       >
-        <NuxtLink to="/" class="font-bold"
-          >ゆゆゆ勇者部ビューアー</NuxtLink
-        >
+        <NuxtLink to="/" class="font-bold">
+          Shion・ゆゆゆ勇者部アーカイブビューアー
+        </NuxtLink>
 
         <ul class="flex gap-2">
           <li v-for="item in navItems" :key="item.name">
