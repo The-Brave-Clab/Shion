@@ -8,7 +8,8 @@
     "build": "nuxt generate",
     "dev": "nuxt dev",
     "preview": "npx serve .output/public",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prebuild": "node scripts/fetch-data.js"
   },
   "dependencies": {
     "@fontsource-variable/noto-sans-jp": "^5.2.5",
@@ -30,6 +31,8 @@
     "@nuxtjs/tailwindcss": "^6.13.2",
     "@tanstack/vue-table": "^8.21.2",
     "@types/node": "^22.13.14",
+    "adm-zip": "^0.5.16",
+    "axios": "^1.8.4",
     "zod": "^3.24.2"
   }
 }

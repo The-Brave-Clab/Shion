@@ -11,6 +11,7 @@
 ## Setup
 
 Place the files you downloaded using [yyyysb-python](https://github.com/The-Brave-Clab/yyyysb-python) into the `public/data` directory as follow:
+
 ```
 Shion/public
 └──data
@@ -26,6 +27,17 @@ Shion/public
    ├──video
    └──vimeo
 ```
+
+Or add the environment variable `NUXT_PUBLIC_BASE_URL`, which will be appended before the path as an endpoint for loading resources like videos.
+
+```bash
+# Example
+NUXT_PUBLIC_BASE_URL="http://localhost:3000"
+# The endpoint will be:
+"http://localhost:3000/data/tlPost/:id/data.json"
+```
+
+Remember to always perform either of the two actions above, otherwise you will have problems building or loading resources.
 
 Make sure to install dependencies:
 
