@@ -114,5 +114,5 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - Pages to be implemented
   - [x] Timeline
   - [ ] Article
-  - [ ] information
+  - [ ] Information
   - [ ] Video
