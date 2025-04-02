@@ -23,7 +23,7 @@ useSeoMeta({
   title: "Shion",
   description: "ゆゆゆ勇者部アーカイブビューアー",
   ogImage: {
-    url: `${baseUrl}/logo_orig.webp`,
+    url: `${baseUrl}/logo_orig.png`,
   },
 });
 </script>
