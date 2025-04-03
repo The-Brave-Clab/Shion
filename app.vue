@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import "@fontsource-variable/noto-sans-jp";
 
-import FullscreenImageViewer from "./components/FullscreenImageViewer.vue";
+// import FullscreenImageViewer from "./components/FullscreenImageViewer.vue";
 // import { SET_FULLSCREEN_KEY } from "./components/keys";
 import { siteTitle } from "./lib/utils";
 
@@ -60,7 +60,7 @@ useSeoMeta({
     </div>
   </div>
 
-  <FullscreenImageViewer ref="imageViewer" />
+  <!--<FullscreenImageViewer ref="imageViewer" />-->
 </template>
 
 <style scoped></style>
