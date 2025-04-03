@@ -57,7 +57,7 @@ useSeoMeta({
       -->
 
       <main>
-        <!--<NuxtPage />-->
+        <NuxtPage />
       </main>
     </div>
   </div>

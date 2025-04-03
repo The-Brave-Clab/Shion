@@ -7,5 +7,6 @@ useSeoMeta({
 </script>
 
 <template>
-  <TimelineItems />
+  <div>___</div>
+  <!--<TimelineItems />-->
 </template>
