@@ -23,6 +23,8 @@ const artist = computed(() =>
   singleValue(item.value!.relationships?.artist?.data)
 );
 
+const runtimeConfig = useRuntimeConfig();
+
 await fetchContentHtml();
 
 useSeoMeta({
@@ -44,13 +46,14 @@ async function fetchContentHtml() {
     const dom = new LinkeDOMParser().parseFromString(data.value!, "text/html");
 
     dom.querySelectorAll("[src]").forEach((el: Element) => {
-      const origSrc = el.getAttribute("src");
+      const origSrc = el.getAttribute("src")!;
 
-      if (origSrc)
-        el.setAttribute(
-          "src",
-          withBaseUrl(`/data/article/${item.value!.id}/${origSrc}`)
-        );
+      el.setAttribute(
+        "src",
+        `${runtimeConfig.public.baseUrl}/data/article/${
+          item.value!.id
+        }/${origSrc}`
+      );
     });
 
     title.value = dom.querySelector("title")?.textContent ?? undefined;
