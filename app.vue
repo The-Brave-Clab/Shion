@@ -1,5 +1,4 @@
 <script setup lang="ts">
-/*
 import "@fontsource-variable/noto-sans-jp";
 
 import FullscreenImageViewer from "./components/FullscreenImageViewer.vue";
@@ -29,7 +28,7 @@ useSeoMeta({
     url: `${baseUrl}/logo_orig.png`,
   },
 });
-*/
+
 </script>
 
 <template>
