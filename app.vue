@@ -18,10 +18,10 @@ const imageViewer = ref<InstanceType<typeof FullscreenImageViewer> | null>(
 provide(SET_FULLSCREEN_KEY, (items: string[], index = 0) => {
   imageViewer.value?.setFullscreen(items, index);
 });
+*/
 
 const url = useRequestURL();
 const baseUrl = url.origin;
-*/
 
 useSeoMeta({
   title: siteTitle(),
