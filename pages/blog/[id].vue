@@ -47,7 +47,10 @@ async function fetchContentHtml() {
       const origSrc = el.getAttribute("src");
 
       if (origSrc)
-        el.setAttribute("src", `/data/article/${item.value!.id}/${origSrc}`);
+        el.setAttribute(
+          "src",
+          withBaseUrl(`/data/article/${item.value!.id}/${origSrc}`)
+        );
     });
 
     title.value = dom.querySelector("title")?.textContent ?? undefined;
