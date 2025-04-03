@@ -35,5 +35,5 @@ export function arrayValue<T>(value: T | T[]): T[] {
 }
 
 export function siteTitle(...children: string[]) {
-  return ["Shion", ...children].toReversed().join("・");
+  return [...children.reverse(), "Shion"].join("・");
 }
