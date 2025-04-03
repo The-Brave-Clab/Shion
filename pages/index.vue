@@ -1,14 +1,5 @@
-<script lang="ts" setup>
-/*
-import { siteTitle } from "~/lib/utils";
-
-useSeoMeta({
-  title: siteTitle("タイムライン"),
-});
-*/
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <div>___</div>
-  <!--<TimelineItems />-->
+  <TimelineItems />
 </template>
