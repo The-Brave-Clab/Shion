@@ -3,7 +3,7 @@ import "@fontsource-variable/noto-sans-jp";
 
 import FullscreenImageViewer from "./components/FullscreenImageViewer.vue";
 import { SET_FULLSCREEN_KEY } from "./components/keys";
-import { siteTitle } from "./lib/utils";
+// import { siteTitle } from "./lib/utils";
 
 const navItems: { name: string; path: string }[] = [
   { name: "タイムライン", path: "/" },
@@ -18,7 +18,7 @@ provide(SET_FULLSCREEN_KEY, (items: string[], index = 0) => {
   imageViewer.value?.setFullscreen(items, index);
 });
 
-const url = useRequestURL();
+/*const url = useRequestURL();
 const baseUrl = url.origin;
 
 useSeoMeta({
@@ -27,7 +27,7 @@ useSeoMeta({
   ogImage: {
     url: `${baseUrl}/logo_orig.png`,
   },
-});
+});*/
 </script>
 
 <template>
