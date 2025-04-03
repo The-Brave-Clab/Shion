@@ -4,7 +4,7 @@ import type { ArchiveItem } from "@/types";
 const items = ref<ArchiveItem[]>([]);
 const loading = ref(true);
 
-// await fetchItems();
+await fetchItems();
 
 async function fetchItems() {
   const { data } = await useFetch("/api/items/tlPost", { retry: 3 });
