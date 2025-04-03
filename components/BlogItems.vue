@@ -19,7 +19,7 @@ const filteredItems = computed(() => {
   } else return items.value;
 });
 
-await fetchItems();
+// await fetchItems();
 
 async function fetchItems() {
   const { data } = await useFetch("/api/items/article", { retry: 3 });
