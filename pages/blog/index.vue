@@ -2,10 +2,10 @@
 import { siteTitle } from "~/lib/utils";
 
 useSeoMeta({
-  title: siteTitle("タイムライン"),
+  title: siteTitle("ブログ"),
 });
 </script>
 
 <template>
-  <TimelineItems />
+  <BlogItems />
 </template>

@@ -33,3 +33,7 @@ export function singleValue<T>(value: T | T[]): T {
 export function arrayValue<T>(value: T | T[]): T[] {
   return Array.isArray(value) ? value : [value];
 }
+
+export function siteTitle(...children: string[]) {
+  return ["Shion", ...children].toReversed().join("・");
+}

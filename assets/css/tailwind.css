@@ -67,4 +67,24 @@
     @apply bg-[#fef2f2] text-foreground;
     font-family: "Noto Sans JP Variable", sans-serif;
   }
+
+  .normal-x-space {
+    @apply space-x-2 sm:space-x-4;
+  }
+
+  .normal-y-space {
+    @apply space-y-2 sm:space-y-4;
+  }
+
+  .normal-gap {
+    @apply gap-2 sm:gap-4;
+  }
+
+  .normal-x-gap {
+    @apply gap-x-2 sm:gap-x-4;
+  }
+
+  .normal-y-gap {
+    @apply gap-y-2 sm:gap-y-4;
+  }
 }

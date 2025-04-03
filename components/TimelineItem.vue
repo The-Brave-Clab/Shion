@@ -46,9 +46,11 @@ const mostVoted = computed(
 await fetchText();
 
 async function fetchText() {
-  const { data, error } = await useFetch("/api/getTlPostText", {
+  const { data, error } = await useFetch("/api/getItemContent", {
     query: {
+      type: "tlPost",
       id: item.value.id,
+      filename: "text.txt",
     },
   });
 
