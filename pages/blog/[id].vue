@@ -13,7 +13,7 @@ const { data: item, error } = await useFetch<ArchiveItem>("/api/getItemData", {
 if (error.value) {
   if (error.value.statusCode === 404)
     throw createError({ statusCode: 404, message: "Item not found" });
-  else throw createError({ statusCode: 500, message: "Server error__" });
+  else throw createError({ statusCode: 500, message: "Server error" });
 }
 
 const title = ref<string>();

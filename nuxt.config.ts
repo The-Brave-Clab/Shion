@@ -12,4 +12,7 @@ export default defineNuxtConfig({
       baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "",
     },
   },
+  nitro: {
+    logLevel: 999,
+  },
 });
