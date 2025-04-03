@@ -35,7 +35,8 @@ export default defineEventHandler(async (event) => {
     }
 
     return item;
-  } catch {
+  } catch (error) {
+    console.error("Error reading item:", error);
     throw createError({ statusCode: 500, message: "Failed to read item" });
   }
 });
