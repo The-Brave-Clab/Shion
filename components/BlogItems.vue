@@ -22,7 +22,7 @@ const filteredItems = computed(() => {
 await fetchItems();
 
 async function fetchItems() {
-  const { data } = await useFetch("/api/items/article", { retry: 3 });
+  const { data } = await useFetch("/api/items/article");
 
   if (data.value) items.value = data.value;
   loading.value = false;

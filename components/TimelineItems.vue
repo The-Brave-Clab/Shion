@@ -7,7 +7,7 @@ const loading = ref(true);
 await fetchItems();
 
 async function fetchItems() {
-  const { data } = await useFetch("/api/items/tlPost", { retry: 3 });
+  const { data } = await useFetch("/api/items/tlPost");
 
   if (data.value) items.value = data.value;
   loading.value = false;
