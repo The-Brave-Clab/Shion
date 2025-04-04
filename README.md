@@ -113,6 +113,6 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 - Pages to be implemented
   - [x] Timeline
-  - [ ] Article
-  - [ ] Information
-  - [ ] Video
+  - [x] Article
+  - [x] Information
+  - [x] Video
