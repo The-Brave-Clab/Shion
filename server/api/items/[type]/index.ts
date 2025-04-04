@@ -5,7 +5,13 @@ import { existsSync } from "fs";
 import type { ArchiveItem } from "~/types";
 import { archiveDataCache, dataPath, linkRelationships } from "~/server/utils";
 
-const categories = ["tlPost", "article", "video", "information"];
+const categories = [
+  "tlPost",
+  "article",
+  "video",
+  "information",
+  "informationCategory",
+];
 
 function isValidType(type: string): boolean {
   return categories.includes(type);

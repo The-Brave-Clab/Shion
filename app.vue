@@ -37,19 +37,22 @@ useSeoMeta({
   <div class="flex flex-col items-center p-2 sm:p-4">
     <div class="max-w-3xl w-full space-y-4">
       <nav
-        class="bg-primary text-primary-foreground text-sm px-2 py-1 -mx-1 shadow rounded flex flex-wrap gap-x-2 z-10 sticky top-2 sm:top-4 sm:-mx-3"
+        class="bg-primary text-primary-foreground text-sm px-2 py-1 -mx-1 shadow rounded flex items-end gap-x-2 z-10 sticky top-2 sm:top-4 sm:-mx-3"
       >
-        <NuxtLink to="/" class="font-black">
-          Shion・ゆゆゆ勇者部アーカイブビューアー
-        </NuxtLink>
+        <div class="flex-1 flex flex-wrap gap-x-2">
+          <NuxtLink to="/" class="font-black">
+            Shion・ゆゆゆ勇者部アーカイブビューアー
+          </NuxtLink>
 
-        <ul class="flex gap-2">
-          <li v-for="item in navItems" :key="item.name">
-            <NuxtLink :to="item.path" class="hover:underline">{{
-              item.name
-            }}</NuxtLink>
-          </li>
-        </ul>
+          <ul class="flex gap-2">
+            <li v-for="item in navItems" :key="item.name">
+              <NuxtLink :to="item.path" class="hover:underline">{{
+                item.name
+              }}</NuxtLink>
+            </li>
+          </ul>
+        </div>
+        <NuxtLink to="/information" class="hover:underline">最新情報</NuxtLink>
       </nav>
 
       <main>
