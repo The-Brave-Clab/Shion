@@ -8,6 +8,7 @@ import { siteTitle } from "./lib/utils";
 const navItems: { name: string; path: string }[] = [
   { name: "タイムライン", path: "/" },
   { name: "ブログ", path: "/blog" },
+  { name: "動画", path: "/video" },
 ];
 
 const imageViewer = ref<InstanceType<typeof FullscreenImageViewer> | null>(
