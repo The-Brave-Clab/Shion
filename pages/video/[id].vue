@@ -46,7 +46,9 @@ async function fetchContentHtml() {
 
       el.setAttribute(
         "src",
-        origSrc.replace("../..", `${runtimeConfig.public.baseUrl}/data`)
+        origSrc
+          .replace("../..", `${runtimeConfig.public.baseUrl}/data`)
+          .replace(/\.mov$/, ".webm")
       );
 
       el.removeAttribute("width");
