@@ -3,6 +3,7 @@ import { DOMParser as LinkeDOMParser } from "linkedom";
 
 import { singleValue, withBaseUrl } from "~/lib/utils";
 import type { ArchiveItem } from "~/types";
+import { videoCategories } from "./common";
 
 const props = defineProps<{
   item: ArchiveItem;
@@ -11,6 +12,10 @@ const props = defineProps<{
 const { item } = toRefs(props);
 
 const title = ref<string>();
+
+const category = computed(() =>
+  videoCategories.find((c) => c.value === item.value.attributes!.categoryID)
+);
 
 await fetchContentHtml();
 
@@ -52,6 +57,9 @@ async function fetchContentHtml() {
           name="mdi:play"
           class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl text-primary-foreground shadow"
         />
+        <Badge v-if="category" class="absolute top-2 left-2">{{
+          category.label
+        }}</Badge>
       </div>
       <div class="p-4 font-bold text-xs">{{ title }}</div>
     </article>

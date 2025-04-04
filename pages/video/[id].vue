@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 import { DOMParser as LinkeDOMParser } from "linkedom";
+import { videoCategories } from "~/components/common";
 
 import { siteTitle } from "~/lib/utils";
 import type { ArchiveItem } from "~/types";
 
 const route = useRoute();
+const runtimeConfig = useRuntimeConfig();
 
 const { data: item, error } = await useFetch<ArchiveItem>("/api/getItemData", {
   query: { type: "video", id: route.params.id },
@@ -19,7 +21,9 @@ if (error.value) {
 const title = ref<string>();
 const html = ref<string>();
 
-const runtimeConfig = useRuntimeConfig();
+const category = computed(() =>
+  videoCategories.find((c) => c.value === item.value?.attributes!.categoryID)
+);
 
 await fetchContentHtml();
 
@@ -79,6 +83,7 @@ async function fetchContentHtml() {
 
     <article class="bg-card rounded shadow p-4 space-y-4">
       <div class="flex items-center gap-2">
+        <Badge v-if="category">{{ category.label }}</Badge>
         <time
           v-if="item.attributes?.publishDate"
           :datetime="item.attributes.publishDate"
