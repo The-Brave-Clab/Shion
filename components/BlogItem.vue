@@ -67,7 +67,7 @@ async function fetchContentHtml() {
               }/small.png`
             )
           "
-          class="w-full aspect-square object-cover"
+          class="w-full aspect-square object-cover rounded"
         />
       </div>
 
