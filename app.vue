@@ -36,7 +36,7 @@ useSeoMeta({
   <div class="flex flex-col items-center p-2 sm:p-4">
     <div class="max-w-3xl w-full space-y-4">
       <nav
-        class="bg-primary text-primary-foreground text-sm px-2 py-1 -mx-2 shadow rounded flex flex-wrap gap-x-2 z-10 sticky top-2 sm:top-4 sm:-mx-4"
+        class="bg-primary text-primary-foreground text-sm px-2 py-1 -mx-1 shadow rounded flex flex-wrap gap-x-2 z-10 sticky top-2 sm:top-4 sm:-mx-3"
       >
         <NuxtLink to="/" class="font-black">
           Shion・ゆゆゆ勇者部アーカイブビューアー
