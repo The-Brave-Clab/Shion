@@ -64,4 +64,13 @@ useSeoMeta({
   <FullscreenImageViewer ref="imageViewer" />
 </template>
 
-<style scoped></style>
+<style scoped>
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+</style>
